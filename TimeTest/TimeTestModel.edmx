@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TimeTestDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CCLG">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="JOB.PHASE.CC" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="JOB" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SUB JOB" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PHASE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="COST CODE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="EWO" Type="varchar" MaxLength="50" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="50" />
+          <Property Name="CLIENT PO" Type="varchar" MaxLength="50" />
+          <Property Name="EXTRA" Type="varchar" MaxLength="50" />
+          <Property Name="WORK ORDER" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="TimeTestDBModelStoreContainer">
+          <EntitySet Name="CCLG" EntityType="Self.CCLG" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TimeTestDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="TimeTestDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="CCLGs" EntityType="TimeTestDBModel.CCLG" />
+        </EntityContainer>
+        <EntityType Name="CCLG">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="JOB_PHASE_CC" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="JOB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SUB_JOB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PHASE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COST_CODE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EWO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CLIENT_PO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EXTRA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="WORK_ORDER" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TimeTestDBModelStoreContainer" CdmEntityContainer="TimeTestDBEntities">
+          <EntitySetMapping Name="CCLGs">
+            <EntityTypeMapping TypeName="TimeTestDBModel.CCLG">
+              <MappingFragment StoreEntitySet="CCLG">
+                <ScalarProperty Name="WORK_ORDER" ColumnName="WORK ORDER" />
+                <ScalarProperty Name="EXTRA" ColumnName="EXTRA" />
+                <ScalarProperty Name="CLIENT_PO" ColumnName="CLIENT PO" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="EWO" ColumnName="EWO" />
+                <ScalarProperty Name="COST_CODE" ColumnName="COST CODE" />
+                <ScalarProperty Name="PHASE" ColumnName="PHASE" />
+                <ScalarProperty Name="SUB_JOB" ColumnName="SUB JOB" />
+                <ScalarProperty Name="JOB" ColumnName="JOB" />
+                <ScalarProperty Name="JOB_PHASE_CC" ColumnName="JOB.PHASE.CC" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

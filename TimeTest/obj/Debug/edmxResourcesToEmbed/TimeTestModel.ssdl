@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TimeTestDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CCLG">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JOB.PHASE.CC" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JOB" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SUB JOB" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PHASE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="COST CODE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="EWO" Type="varchar" MaxLength="50" />
+    <Property Name="DESCRIPTION" Type="varchar" MaxLength="50" />
+    <Property Name="CLIENT PO" Type="varchar" MaxLength="50" />
+    <Property Name="EXTRA" Type="varchar" MaxLength="50" />
+    <Property Name="WORK ORDER" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="TimeTestDBModelStoreContainer">
+    <EntitySet Name="CCLG" EntityType="Self.CCLG" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

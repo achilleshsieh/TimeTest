@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TimeTestDBModelStoreContainer" CdmEntityContainer="TimeTestDBEntities">
+    <EntitySetMapping Name="CCLGs">
+      <EntityTypeMapping TypeName="TimeTestDBModel.CCLG">
+        <MappingFragment StoreEntitySet="CCLG">
+          <ScalarProperty Name="WORK_ORDER" ColumnName="WORK ORDER" />
+          <ScalarProperty Name="EXTRA" ColumnName="EXTRA" />
+          <ScalarProperty Name="CLIENT_PO" ColumnName="CLIENT PO" />
+          <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+          <ScalarProperty Name="EWO" ColumnName="EWO" />
+          <ScalarProperty Name="COST_CODE" ColumnName="COST CODE" />
+          <ScalarProperty Name="PHASE" ColumnName="PHASE" />
+          <ScalarProperty Name="SUB_JOB" ColumnName="SUB JOB" />
+          <ScalarProperty Name="JOB" ColumnName="JOB" />
+          <ScalarProperty Name="JOB_PHASE_CC" ColumnName="JOB.PHASE.CC" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
